@@ -7,8 +7,8 @@
   --primary: #3d8168;
 
   /* FONTS */
-  --heading-font-family: 'Montserrat', 'Arial', sans-serif;
-  --body-font-family: 'Fraunces', 'Times New Roman', serif;
+  --body-font-family: 'Montserrat', 'Arial', sans-serif;
+  --heading-font-family: 'Fraunces', 'Times New Roman', serif;
 
 }
 
@@ -23,6 +23,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -44,7 +45,7 @@ body {
 
 /* IMAGES */
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
 }
 
@@ -65,7 +66,7 @@ img {
 /* PRODUCT PREVIEW CARD */
 .product-preview-card {
   width: 343px;
-  height: 611px;
+  height: 100%;
   border-radius: 10px;
   background-color: #fff;
   overflow: hidden;
@@ -84,12 +85,26 @@ img {
   flex-direction: column;
   padding: 24px;
 }
+.product-preview-card__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: var(--heading-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-color-dark);
+  line-height: 32px;
+}
 .product-preview-card__category {
   order: -1;
+  margin-top: 0;
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--text-color);
 }
-.product-preview-card__title {
 
-}
 .product-preview-card__description {
 }
 .product-preview-card__price-box {
